@@ -1,0 +1,14 @@
+Task 1-a
+    -am folosit parcurgerile DFS pt fiecare componenta conexa
+    -notam nodurile prin care am facut parcurgerile pt a distinge componentele conexe intre ele
+    -valorii de visited atribuita fiecarui nod,am atribuit indexul componentei conexe de care apartine,adica daca avem 5 componente conexe,valorile de visited pot fi de la 1 la 5
+
+Task 1-b
+    -am aplicat agoritmul lui kruskal pt aflarea arborelui de cost minim
+    -am aplicat acest algoritm pt fiecare componenta conexa de la punctul anterior
+
+Task 2
+    -am aplicat algoritmul lui Dijkstra pt aflarea distantelor minime de la un anumit punct
+    -am aflat restul datelor conform cerintei
+    -am folosit un DFS special in care am inclus conditia de a ajunge la insula
+    -in dijkstra am inclus conditia de a nu putea ajunge la vapor

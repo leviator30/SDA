@@ -1,0 +1,15 @@
+Amet Levent - grupa 313CD 
+
+Problema a fost implementata folosind:
+-o lista dublu inlantuita;
+-doua stive(una pentru UNDO si cealalta pentru REDO);
+-o coada de comenzi,in care am pus comanda cu tot cu argumentul litera unde a fost cazul(ex:MOVE_LEFT_CHAR X);
+
+Am facut citirea linie cu linie a fisierului de intrare si am pus intr-un vector de string-uri comenzile respective.
+Dupa,am verificat fiecare ce comanda e,si le-am pus in coada.
+Am ajuns la comanda "EXECUTE",am scos din coada prima comanda,si am imlementat ce mi se cerea in enunt,cu precizarea ca argumentul comenzii a fost separat de comanda si functiile cerute aveau in argument "char character".
+Comenzile de "UNDO" SI "REDO" au necesitat implementarea in aceasta ordine(Nu pot avea REDO fara UNDO).
+Memoram pointerul la adresa curenta a degetului inainte sa se utilizeze comenzile precizate("MOVE_LEFT","MOVE_RIGHT","MOVE_LEFT_CHAR","MOVE_RIGHT_CHAR").Acesta este pus in stiva de UNDO.Mai multe comenzi (la rand) din lista precizata genereaza o stiva de UNDO mai mare.
+Cand efectuez "UNDO",pun pozitia curenta a degetului in stiva de REDO si mut degetul pe pozitia memorata in stiva de UNDO.
+Cand efectuez "REDO",pun pozitia curenta a degetului in stiva de UNDO si mut degetul pe pozitia memorata in stiva de REDO.
+Cand am comanda "WRITE",golesc stiva(masura de precautie);
